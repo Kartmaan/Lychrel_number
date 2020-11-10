@@ -76,7 +76,7 @@ def lychrel(x, detailed = False) : # <int>
 				L.append((nbr, pal(nbr), res))
 			else:
 				L.append(res)
-                
+
 			nbr = res
 			continue
 
