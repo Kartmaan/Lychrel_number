@@ -34,3 +34,6 @@ When the iteration stops due to time out, the function returns a list in which i
 ![cap_lychrel](https://user-images.githubusercontent.com/11463619/98821963-7f6fde00-2430-11eb-8e8d-bd5fe3b0c36a.png)
 
 ## An unsolved problem
+As far as supercomputers are able to calculate, these Lychrel numbers have not resulted in any palindrome, however there 
+is currently no formal mathematical proof to ensure that these numbers will never result in a palindrome. 
+The reasons why these numbers are the exception is also a poorly understood problem.
