@@ -11,7 +11,7 @@ result is not a palindrome.
 - By default (`detailed = False`), only the result of intermediate operations is added to the list, but a more detailed display of the 
 calculations is possible by setting `detailed = True`, in this case, each addition and its result appear in tulps.
 
-Exemple with 192 : 192+291 = 483, 483+384 = 867, 867+768 = 1635, 1635+5361 = 6996
+Exemple for 192 : 192+291 = 483, 483+384 = 867, 867+768 = 1635, 1635+5361 = 6996
 - `detailed = False` : [483, 867, 1635, 6996]
 - `detailed = True` : [(192, 291, 483), (483, 384, 867), (867, 768, 1635), (1635, 5361, 6996)]
 
