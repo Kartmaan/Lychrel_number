@@ -1,4 +1,5 @@
 import time
+from decimal import Decimal
 
 def pal(x) : # <int>
     """ Return the palindrome of a int number x. """
@@ -58,14 +59,20 @@ def lychrel(x, detailed = False) : # <int>
 		# Time control (potential Lychrel number)
 		exe_time = time.time()
 		if exe_time >= start_time + wd :
-			mess = "ITER. STOP - "+str(x)+" LYCHREL NUMBER ?"
-			L = [mess]
+			res = Decimal(res) #to print scientific notation
+			stop = []
+			stop.append("ITER. STOP")
+			stop.append(wd)
+			stop.append("{:.2e}".format(res))
+			stop.append(x)
+			L = []
+			L.append(stop)
 			break
 
 		# It's a palindrome
 		if ispal(res) == True :
 			if detailed == True:
-				L.append((nbr, pal(nbr), res))
+				L.append([nbr, pal(nbr), res])
 			else:
 				L.append(res)
 			break
@@ -73,7 +80,7 @@ def lychrel(x, detailed = False) : # <int>
 		# NOT a palindrome
 		elif ispal(res) == False :
 			if detailed == True:
-				L.append((nbr, pal(nbr), res))
+				L.append([nbr, pal(nbr), res])
 			else:
 				L.append(res)
 
@@ -83,6 +90,6 @@ def lychrel(x, detailed = False) : # <int>
 	return L # <list>
 
 if __name__ == "__main__" :
-    print("97 : ", lychrel(97))
-    print("154 : ", lychrel(154, detailed=True))
-    print("196 : ", lychrel(196)) # Potential Lychrel number
+    print("192 (default output) : ", lychrel(192))
+    print("192 (detailed output) : ", lychrel(192, detailed=True))
+    print("196 :", lychrel(196)) # Potential Lychrel number
