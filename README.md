@@ -15,6 +15,8 @@ Exemple for 192 : 192+291 = 483 | 483+384 = 867 | 867+768 = 1635 | 1635+5361 = 6
 - `detailed = False` : [483, 867, 1635, 6996]
 - `detailed = True` : [[192, 291, 483], [483, 384, 867], [867, 768, 1635], [1635, 5361, 6996]]
 
+![cap_192](https://user-images.githubusercontent.com/11463619/98821956-7da61a80-2430-11eb-96a6-a1c6d148444f.png)
+
 ## What's a Lychrel number ?
 There are some numbers for which this iterative process does not end, i.e. the algorithm cannot result in a palindrome in a 
 reasonable time. 196 is on of them, for this value supercomputers reached 1 billion-digit numbers without reaching the palindrome, 
@@ -29,6 +31,6 @@ When the iteration stops due to time out, the function returns a list in which i
 - [2] Value on which the iteration process stopped (scientific notation)
 - [3] The initial number inserted
 
-![cap_lychrel](https://user-images.githubusercontent.com/11463619/98820006-dd4ef680-242d-11eb-96ab-a34e5e74ee81.png)
+![cap_lychrel](https://user-images.githubusercontent.com/11463619/98821963-7f6fde00-2430-11eb-8e8d-bd5fe3b0c36a.png)
 
 ## An unsolved problem
