@@ -2,50 +2,50 @@ import time
 from decimal import Decimal
 
 def pal(x) : # <int>
-    """ Return the palindrome of a int number x. """
+	""" Return the palindrome of a int number x. """
 
-    x = int(x)
-    num = x
-    m = 0
+	x = int(x)
+	num = x
+	m = 0
 
-    while num > 0 :
-        m = m*10 + num%10
-        m = int(m)
-        num = num // 10
-        num = int(num)  
-    return m # <int>
+	while num > 0 :
+		m = m*10 + num%10
+		m = int(m)
+		num = num // 10
+		num = int(num)  
+	return m # <int>
 
 def ispal(x) : # <int>
-    """Palindrome detector.
-    Return True if it's a palindrome, False otherwise."""
+	"""Palindrome detector.
+	Return True if it's a palindrome, False otherwise."""
 
-    x = int(x)
-    num = x
-    m = 0
+	x = int(x)
+	num = x
+	m = 0
 
-    while num > 0 :
-        m = m*10 + num%10
-        m = int(m)
-        num = num // 10
-        num = int(num)
-    
-    if m == x :
-        return True # <bool>
-    else :
-        return False # <bool>
+	while num > 0 :
+		m = m*10 + num%10
+		m = int(m)
+		num = num // 10
+		num = int(num)
+	
+	if m == x :
+		return True # <bool>
+	else :
+		return False # <bool>
 
 def lychrel(x, detailed = False) : # <int>
 	""" Function carrying out the sequences of operations 
 	leading to the palindrome.
 	- The intermediate stages of the operation are inserted in a 
 	list until the palindrome is obtained. 
-    - By default, only the result of intermediate operations is 
-    added to the list, but a more detailed display of the 
-    calculations is possible by setting 'detailed = True', 
-    in this case, each addition and its result appear in tulps.
-    - A duration in seconds is allocated to the calculation, 
-    beyond this allotted time the process stops, meaning that 
-    the number inserted is potentially a Lychrel number"""
+	- By default, only the result of intermediate operations is 
+	added to the list, but a more detailed display of the 
+	calculations is possible by setting 'detailed = True', 
+	in this case, each addition and its result appear in tulps.
+	- A duration in seconds is allocated to the calculation, 
+	beyond this allotted time the process stops, meaning that 
+	the number inserted is potentially a Lychrel number"""
 
 	x = int(x)
 	nbr = x # x = initial value, nbr = value to handle
@@ -90,6 +90,6 @@ def lychrel(x, detailed = False) : # <int>
 	return L # <list>
 
 if __name__ == "__main__" :
-    print("192 (default output) : ", lychrel(192))
-    print("192 (detailed output) : ", lychrel(192, detailed=True))
-    print("196 :", lychrel(196)) # Potential Lychrel number
+	print("192 (default output) : ", lychrel(192))
+	print("192 (detailed output) : ", lychrel(192, detailed=True))
+	print("196 :", lychrel(196))
